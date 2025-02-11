@@ -7,8 +7,9 @@ return {
     vim.opt.termguicolors = true
 
     require('nvim-tree').setup()
-    local harpoon = require 'harpoon'
-    -- REQUIRED
-    harpoon:setup()
+
+    vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
+      desc = 'Toggle file [E]xplorer',
+    })
   end,
 }
